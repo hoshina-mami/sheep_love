@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a4d798d3c7be446a9bfc8de4d063040b
-timeCreated: 1478429061
+timeCreated: 1478529267
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,7 @@ TextureImporter:
     21300008: btn_hint
     21300010: logo
     21300012: texture
+    21300014: texture2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,10 +64,10 @@ TextureImporter:
       name: btn_close
       rect:
         serializedVersion: 2
-        x: 1538
-        y: 0
-        width: 150
-        height: 150
+        x: 0
+        y: 1802
+        width: 112
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -78,8 +79,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1538
-        width: 817
-        height: 350
+        width: 612
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -89,10 +90,10 @@ TextureImporter:
       name: line
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1890
-        width: 801
-        height: 9
+        x: 614
+        y: 1714
+        width: 600
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,10 +103,10 @@ TextureImporter:
       name: btn_setting
       rect:
         serializedVersion: 2
-        x: 1690
-        y: 0
-        width: 150
-        height: 150
+        x: 0
+        y: 1916
+        width: 112
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,10 +116,10 @@ TextureImporter:
       name: btn_hint
       rect:
         serializedVersion: 2
-        x: 1842
-        y: 0
-        width: 150
-        height: 150
+        x: 114
+        y: 1802
+        width: 112
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,22 +129,22 @@ TextureImporter:
       name: logo
       rect:
         serializedVersion: 2
-        x: 819
+        x: 614
         y: 1538
-        width: 883
-        height: 232
+        width: 662
+        height: 174
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: texture
+      name: texture2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1536
+        width: 1314
         height: 1536
       alignment: 0
       pivot: {x: 0, y: 0}

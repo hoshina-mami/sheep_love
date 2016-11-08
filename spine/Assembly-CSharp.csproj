@@ -55,8 +55,9 @@
      <Compile Include="Assets\Examples\Scripts\SpineGauge.cs" />
      <Compile Include="Assets\Examples\Scripts\Spineboy.cs" />
      <Compile Include="Assets\Examples\Scripts\SpineboyController.cs" />
+     <Compile Include="Assets\Scripts\AnimController.cs" />
+     <Compile Include="Assets\Scripts\SetDisableObj.cs" />
      <Compile Include="Assets\Scripts\UIcontroller.cs" />
-     <Compile Include="Assets\Scripts\animControl.cs" />
      <Compile Include="Assets\spine-csharp\Animation.cs" />
      <Compile Include="Assets\spine-csharp\AnimationState.cs" />
      <Compile Include="Assets\spine-csharp\AnimationStateData.cs" />
@@ -142,13 +143,13 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Examples\Spine\Raptor\raptor.atlas.txt" />
      <None Include="Assets\Examples\Spine\Spineboy\spineboy.atlas.txt" />
+     <None Include="Assets\sheepAnim\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\FootSoldier\license.txt" />
      <None Include="Assets\Examples\Spine\Raggedy Spineboy\Raggedy Spineboy.atlas.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\spine-unity\Shaders\Bones.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\spine-unity\Ghost\Shaders\SkeletonGhost.shader" />
-     <None Include="Assets\sheepAnim\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\Dragon\dragon.atlas.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\spine-unity\Shaders\Skeleton.shader" />

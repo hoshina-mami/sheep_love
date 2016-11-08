@@ -101,13 +101,13 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Examples\Spine\Raptor\raptor.atlas.txt" />
      <None Include="Assets\Examples\Spine\Spineboy\spineboy.atlas.txt" />
+     <None Include="Assets\sheepAnim\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\FootSoldier\license.txt" />
      <None Include="Assets\Examples\Spine\Raggedy Spineboy\Raggedy Spineboy.atlas.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\spine-unity\Shaders\Bones.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\spine-unity\Ghost\Shaders\SkeletonGhost.shader" />
-     <None Include="Assets\sheepAnim\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\Dragon\dragon.atlas.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\spine-unity\Shaders\Skeleton.shader" />

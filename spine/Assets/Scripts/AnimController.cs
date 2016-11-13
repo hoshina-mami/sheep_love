@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class AnimController : MonoBehaviour {
 
@@ -32,6 +33,14 @@ public class AnimController : MonoBehaviour {
 	private const string ANIM_ROLLING_OUT = "rollingOut";
 	private const string ANIM_VANISH = "vanish";
 
+	private const float MOVE_DISTANCE = 0.5f;
+
+	private Vector3 aTapPoint;
+	private Vector3 EndPoint;
+	private Collider2D aCollider2d;
+	private bool isTouched = false;
+	private bool isMoving = false;
+
 	enum STATE {
 		DEFAULT,
 		SLEEP,
@@ -55,23 +64,66 @@ public class AnimController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
 		if (Input.GetMouseButtonDown(0)) {
 
-			Vector3    aTapPoint   = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Collider2D aCollider2d = Physics2D.OverlapPoint(aTapPoint);
+			if(isTouched || isMoving) { return; }
+
+			aTapPoint   = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			aCollider2d = Physics2D.OverlapPoint(aTapPoint);
 
 			if (aCollider2d) {
 				GameObject obj = aCollider2d.transform.gameObject;
-
-				//ひつじがタップされていたら処理
-				if (obj.name == "sheep") {
-					ChangeAnim ();
-				}
+				isTouched = true;
 			}
 		}
+			
+		if (Input.GetMouseButtonUp (0)) {
+
+			if (isMoving) {
+				
+				//ドラッグからのリリース
+				Debug.Log ("ドラッグした");
+				isTouched = false;
+				isMoving = false;
+				PlayNormalAnim ();
+				
+			} else if (isTouched) {
+				
+				//タップからのリリース
+				Debug.Log ("タップした");
+				ChangeAnim ();
+				isTouched = false;
+			
+			}
+
+		} else if (isTouched && !isMoving) {
+			
+			Debug.Log (Mathf.Abs(aTapPoint.x - EndPoint.x));
+			EndPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+
+			if (Mathf.Abs(aTapPoint.x - EndPoint.x) > MOVE_DISTANCE || Mathf.Abs(aTapPoint.y - EndPoint.y) > MOVE_DISTANCE) {
+				isMoving = true;
+				//撫で中のアニメセット
+				ChangeDragAnim();
+			}
+
+		} else if (isMoving) {
+			
+			//撫で中
+			EndPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			aCollider2d = Physics2D.OverlapPoint(EndPoint);
+
+			if (!aCollider2d) {
+				Debug.Log ("ドラッグした");
+				isTouched = false;
+				isMoving = false;
+				PlayNormalAnim ();
+			}
+			
+		}
 	}
-
-
+		
 	//初期の動きを設定
 	public void SetAnim () 
 	{
@@ -103,6 +155,23 @@ public class AnimController : MonoBehaviour {
 			
 		}
 		
+	}
+
+	public void ChangeDragAnim () 
+	{
+		switch (state) 
+		{
+
+		case STATE.DEFAULT:
+			PlayGladAnim ();
+			break;
+
+//		case STATE.SLEEP:
+//			StartCoroutine(PlayNoticeAnim ());
+//			break;
+
+		}
+
 	}
 
 
@@ -149,6 +218,15 @@ public class AnimController : MonoBehaviour {
 
 		yield return new WaitForSeconds (0.9f);
 		PlayNormalAnim();
+	}
+
+	//撫でられて喜ぶ
+	private void PlayGladAnim ()
+	{
+		skelAnim.skeleton.SetSkin (SKIN_SMILE1);
+		skelAnim.state.ClearTracks ();
+		skelAnim.state.AddAnimation (0, ANIM_GLAD, true, 0);
+		state = STATE.GLAD;
 	}
 
 

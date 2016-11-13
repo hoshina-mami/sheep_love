@@ -67,6 +67,7 @@
      <None Include="Assets\spine-unity\Editor\Resources\SpineAssetDatabaseMarker.txt" />
      <None Include="Assets\Examples\Spine\Eyes\eyes.atlas.txt" />
      <None Include="Assets\spine-unity\Shaders\HiddenPass.shader" />
+     <None Include="Assets\sheepAnim\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\Gauge\Gauge.atlas.txt" />
      <None Include="Assets\alien\alien-pma.atlas.txt" />
      <None Include="Assets\Examples\Spine\FootSoldier\FS_White.atlas.txt" />
@@ -76,7 +77,6 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Examples\Spine\Raptor\raptor.atlas.txt" />
      <None Include="Assets\Examples\Spine\Spineboy\spineboy.atlas.txt" />
-     <None Include="Assets\sheepAnim\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\FootSoldier\license.txt" />
      <None Include="Assets\Examples\Spine\Raggedy Spineboy\Raggedy Spineboy.atlas.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />

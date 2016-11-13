@@ -28,9 +28,9 @@ public class UIcontroller : MonoBehaviour {
 		HintDisplay.SetActive (false);
 		SettingDisplay.SetActive (false);
 
-		#if !UNITY_EDITOR
-		DebugBtn.SetActive (false);
-		#endif
+//		#if !UNITY_EDITOR
+//		DebugBtn.SetActive (false);
+//		#endif
 
 		StartCoroutine(_StartApp ());
 	}
@@ -45,6 +45,7 @@ public class UIcontroller : MonoBehaviour {
 			{
 				if (HintDisplay.activeSelf || SettingDisplay.activeSelf) {
 					CloseSubDisplay ();
+					return;
 				} else {
 					// アプリケーション終了
 					Application.Quit();

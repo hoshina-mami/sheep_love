@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a4d798d3c7be446a9bfc8de4d063040b
-timeCreated: 1478529267
+timeCreated: 1479023391
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,14 @@ TextureImporter:
     21300010: logo
     21300012: texture
     21300014: texture2
+    21300016: sheep0
+    21300018: sheep4
+    21300020: sheep2
+    21300022: sheep1
+    21300024: btn_status
+    21300026: sheep5
+    21300028: sheep3
+    21300030: sheep
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -65,9 +73,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1802
-        width: 112
-        height: 112
+        y: 1920
+        width: 84
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -77,10 +85,10 @@ TextureImporter:
       name: popup
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1538
-        width: 612
-        height: 262
+        x: 1308
+        y: 0
+        width: 459
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -90,10 +98,10 @@ TextureImporter:
       name: line
       rect:
         serializedVersion: 2
-        x: 614
-        y: 1714
-        width: 600
-        height: 6
+        x: 1308
+        y: 198
+        width: 450
+        height: 4
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,10 +111,10 @@ TextureImporter:
       name: btn_setting
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1916
-        width: 112
-        height: 112
+        x: 152
+        y: 1768
+        width: 84
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,10 +124,10 @@ TextureImporter:
       name: btn_hint
       rect:
         serializedVersion: 2
-        x: 114
-        y: 1802
-        width: 112
-        height: 112
+        x: 152
+        y: 1854
+        width: 84
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +137,10 @@ TextureImporter:
       name: logo
       rect:
         serializedVersion: 2
-        x: 614
-        y: 1538
-        width: 662
-        height: 174
+        x: 987
+        y: 307
+        width: 496
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +152,112 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1314
-        height: 1536
+        width: 985
+        height: 1152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sheep0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1154
+        width: 319
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sheep4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1461
+        width: 319
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sheep2
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1154
+        width: 319
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sheep1
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1154
+        width: 319
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: btn_status
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1768
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sheep5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1461
+        width: 319
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sheep3
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1461
+        width: 319
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sheep
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 0
+        width: 319
+        height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

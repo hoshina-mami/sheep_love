@@ -41,6 +41,8 @@ public class AnimController : MonoBehaviour {
 	private bool isTouched = false;
 	private bool isMoving = false;
 
+	private rollController roll = new rollController();
+
 	enum STATE {
 		DEFAULT,
 		SLEEP,
@@ -83,15 +85,11 @@ public class AnimController : MonoBehaviour {
 			if (isMoving) {
 				
 				//ドラッグからのリリース
-				Debug.Log ("ドラッグした");
-				isTouched = false;
-				isMoving = false;
-				PlayNormalAnim ();
+				DragEnd ();
 				
 			} else if (isTouched) {
 				
 				//タップからのリリース
-				Debug.Log ("タップした");
 				ChangeAnim ();
 				isTouched = false;
 			
@@ -99,7 +97,6 @@ public class AnimController : MonoBehaviour {
 
 		} else if (isTouched && !isMoving) {
 			
-			Debug.Log (Mathf.Abs(aTapPoint.x - EndPoint.x));
 			EndPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
 			if (Mathf.Abs(aTapPoint.x - EndPoint.x) > MOVE_DISTANCE || Mathf.Abs(aTapPoint.y - EndPoint.y) > MOVE_DISTANCE) {
@@ -115,10 +112,7 @@ public class AnimController : MonoBehaviour {
 			aCollider2d = Physics2D.OverlapPoint(EndPoint);
 
 			if (!aCollider2d) {
-				Debug.Log ("ドラッグした");
-				isTouched = false;
-				isMoving = false;
-				PlayNormalAnim ();
+				DragEnd ();
 			}
 			
 		}
@@ -130,10 +124,11 @@ public class AnimController : MonoBehaviour {
 		//条件によって動きを変える
 		int randomNum = Random.Range( 0, 2 );
 		Debug.Log (randomNum);
+
 		if (randomNum == 0) {
-			PlayNormalAnim ();
+			roll.doAnim (PlayNormalAnim);
 		} else {
-			PlaySleepAnim ();
+			roll.doAnim (PlaySleepAnim);
 		}
 
 	}
@@ -157,7 +152,7 @@ public class AnimController : MonoBehaviour {
 		
 	}
 
-	public void ChangeDragAnim () 
+	private void ChangeDragAnim () 
 	{
 		switch (state) 
 		{
@@ -166,12 +161,15 @@ public class AnimController : MonoBehaviour {
 			PlayGladAnim ();
 			break;
 
-//		case STATE.SLEEP:
-//			StartCoroutine(PlayNoticeAnim ());
-//			break;
-
 		}
 
+	}
+
+	private void DragEnd ()
+	{
+		isTouched = false;
+		isMoving = false;
+		PlayNormalAnim ();
 	}
 
 

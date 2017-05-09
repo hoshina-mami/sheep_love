@@ -9,6 +9,8 @@ public class UIcontroller : MonoBehaviour {
 	[SerializeField]
 	private GameObject GameDisplay;
 	[SerializeField]
+	private GameObject StatusDisplay;
+	[SerializeField]
 	private GameObject HintDisplay;
 	[SerializeField]
 	private GameObject SettingDisplay;
@@ -27,6 +29,7 @@ public class UIcontroller : MonoBehaviour {
 
 		HintDisplay.SetActive (false);
 		SettingDisplay.SetActive (false);
+		StatusDisplay.SetActive (false);
 
 //		#if !UNITY_EDITOR
 //		DebugBtn.SetActive (false);
@@ -43,7 +46,7 @@ public class UIcontroller : MonoBehaviour {
 			// エスケープキー取得
 			if (Input.GetKey(KeyCode.Escape))
 			{
-				if (HintDisplay.activeSelf || SettingDisplay.activeSelf) {
+				if (HintDisplay.activeSelf || SettingDisplay.activeSelf || StatusDisplay.activeSelf) {
 					CloseSubDisplay ();
 					return;
 				} else {
@@ -68,6 +71,10 @@ public class UIcontroller : MonoBehaviour {
 		case "SETTING":
 			SettingDisplay.SetActive (true);
 			break;
+
+		case "STATUS":
+			StatusDisplay.SetActive (true);
+			break;
 		}
 
 		BackPanel.GetComponent<Image> ().color = ACTIVE_COLOR;
@@ -78,6 +85,7 @@ public class UIcontroller : MonoBehaviour {
 	{
 		HintDisplay.SetActive (false);
 		SettingDisplay.SetActive (false);
+		StatusDisplay.SetActive (false);
 		BackPanel.SetActive (false);
 	}
 

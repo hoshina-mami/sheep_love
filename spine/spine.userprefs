@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/animControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UIcontroller.cs">
     <Files>
-      <File FileName="Assets/animControl.cs" Line="18" Column="24" />
+      <File FileName="Assets/Scripts/UIcontroller.cs" Line="32" Column="35" />
+      <File FileName="Assets/Scripts/popupController.cs" Line="9" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
